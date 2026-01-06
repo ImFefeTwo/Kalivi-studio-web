@@ -1,5 +1,11 @@
 :root {
   --main-bg-color: #9abcc7;
+  --secundary-bg-color: #f7f2f2;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: "Montserrat";
 }
 
 * {
@@ -7,6 +13,13 @@
   margin: 0;
   box-sizing: border-box;
 }
+
+body {
+  font-size: 1.6rem;
+  background-color: var(--secundary-bg-color);
+}
+
+/* == ABOUT == */
 
 .header {
   background-color: var(--main-bg-color);
@@ -26,4 +39,22 @@
   padding: 12px;
   border: none;
   background-color: transparent;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 2.5rem;
+}
+
+.main__kaliviLogo {
+  width: 400px;
+  margin: 2rem 0;
+}
+
+.main__paragraph {
+  text-align: justify;
+  margin: 1rem 0;
 }
