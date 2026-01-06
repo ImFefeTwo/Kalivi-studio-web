@@ -1,0 +1,29 @@
+:root {
+  --main-bg-color: #9abcc7;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.header {
+  background-color: var(--main-bg-color);
+  padding: 20px;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+}
+
+.navbar__img {
+  height: 50px;
+}
+
+.navbar__burgerBox {
+  padding: 12px;
+  border: none;
+  background-color: transparent;
+}
