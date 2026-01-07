@@ -41,17 +41,24 @@ body {
   background-color: transparent;
 }
 
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
 .main {
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
   padding: 2.5rem;
-}
-
-.main__kaliviLogo {
-  width: 400px;
-  margin: 2rem 0;
 }
 
 .main__paragraph {
@@ -75,4 +82,33 @@ body {
 .main__paragraph {
   text-align: justify;
   margin: 1rem 0;
+}
+
+.team {
+  text-align: center;
+}
+
+.team__title {
+  font-weight: bold;
+  letter-spacing: 0.2rem;
+  margin: 2rem 0 0 0;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2.5rem;
+}
+
+.card__img {
+  width: 150px;
+  border-radius: 150px;
+  border: 4px solid var(--main-bg-color);
+  margin: 1.5rem 0 1.5rem 0;
+}
+
+.card__text {
+  padding: 3rem 0;
+  text-align: justify;
 }
