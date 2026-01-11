@@ -1,6 +1,7 @@
 :root {
   --main-bg-color: #9abcc7;
   --secundary-bg-color: #f7f2f2;
+  --font-color: #222; 
 }
 
 html {
@@ -24,6 +25,14 @@ body {
 .header {
   background-color: var(--main-bg-color);
   padding: 20px;
+}
+
+.navbar__links {
+  display: none;
+}
+
+.navbar__socials {
+  display: none;
 }
 
 .navbar {
@@ -133,6 +142,83 @@ body {
 
 .footerContainer__copy {
   margin: 1.2rem 0;
+}
+
+/* == DESKTOP == */
+
+@media (min-width: 991px) {
+
+  body {
+    font-size: 2rem;
+  }
+
+
+
+  .header {
+    padding: 1rem 5rem;
+  }
+
+  .navbar__img {
+    height: 70px;
+  }
+
+  .navbar__burgerBox {
+    display: none;
+  }
+
+  .navbar__socials {
+    display: flex;
+    gap: 3rem;
+  }
+
+  .navbar__links {
+    display: flex;
+    gap: 3rem;
+    align-items: center;
+  }
+
+  .navbar__links a {
+    text-decoration: none;
+    font-size: 2rem;
+    color: var(--font-color);
+  }
+
+  .main__kaliviLogo {
+    width: 50rem;
+  }
+
+  .main__paragraph {
+    max-width: 900px;
+  }
+
+  .card__text {
+    max-width: 500px;
+  }
+
+  .main__paragraph,
+  .card__text {
+    line-height: 3rem;
+  }
+
+  .navbar__links a {
+    position: relative;
+    padding: 0.5rem 0;
+  }
+
+  .navbar__links a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #222;
+    transition: width 0.3s ease;
+  }
+
+  .navbar__links a:hover::after {
+    width: 100%;
+  }
 }
 
 
