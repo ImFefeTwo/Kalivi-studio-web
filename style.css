@@ -1,7 +1,7 @@
 :root {
   --main-bg-color: #9abcc7;
   --secundary-bg-color: #f7f2f2;
-  --font-color: #222; 
+  --font-color: #222;
 }
 
 html {
@@ -20,42 +20,84 @@ body {
   background-color: var(--secundary-bg-color);
 }
 
-/* == ABOUT == */
+body.menu-abierto {
+  overflow: hidden;
+  padding-right: 15px;
+}
 
 .header {
-  background-color: var(--main-bg-color);
-  padding: 20px;
-}
-
-.navbar__links {
-  display: none;
-}
-
-.navbar__socials {
-  display: none;
-}
-
-.navbar {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  padding: 1.2rem;
+  background-color: var(--main-bg-color);
 }
 
-.navbar__img {
-  height: 50px;
+.header__logo {
+  height: 8rem;
 }
 
-.navbar__burgerBox {
-  padding: 12px;
+.nav {
+  opacity: 0;
+  visibility: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  gap: 1rem;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #9abcc7;
+  padding: 5rem;
+  box-shadow: 0 0 0 100vmax rgba(0, 0, 0, 0.5);
+  transform: translateY(-10px);
+  transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s;
+}
+
+.nav-visible {
+  opacity: 1;
+  visibility: visible;
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  gap: 3rem;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #9abcc7;
+  padding: 5rem;
+  box-shadow: 0 0 0 100vmax rgba(0, 0, 0, 0.5);
+}
+
+.close-menu,
+.abrir-menu {
   border: none;
   background-color: transparent;
+  cursor: pointer;
+  font-size: 5rem;
+}
+
+.nav__list {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  gap: 3rem;
+  list-style-type: none;
+}
+
+.nav__list-item a {
+  text-decoration: none;
+  color: var(--font-color);
 }
 
 .visually-hidden {
   position: absolute;
   width: 1px;
   height: 1px;
-  margin: -1px;
   padding: 0;
+  margin: -1px;
   overflow: hidden;
   clip: rect(0, 0, 0, 0);
   white-space: nowrap;
@@ -147,40 +189,32 @@ body {
 /* == DESKTOP == */
 
 @media (min-width: 991px) {
-
   body {
     font-size: 2rem;
   }
 
-
-
-  .header {
-    padding: 1rem 5rem;
+  .nav {
+    opacity: 1;
+    visibility: visible;
+    position: static;
+    flex-direction: row;
+    align-items: center;
+    padding: 0;
+    box-shadow: none;
+    background-color: transparent;
   }
 
-  .navbar__img {
-    height: 70px;
+  .nav__list {
+    flex-direction: row;
+    gap: 3rem;
   }
 
-  .navbar__burgerBox {
+  .close-menu {
     display: none;
   }
 
-  .navbar__socials {
-    display: flex;
-    gap: 3rem;
-  }
-
-  .navbar__links {
-    display: flex;
-    gap: 3rem;
-    align-items: center;
-  }
-
-  .navbar__links a {
-    text-decoration: none;
-    font-size: 2rem;
-    color: var(--font-color);
+  .abrir-menu {
+    display: none;
   }
 
   .main__kaliviLogo {
@@ -206,7 +240,7 @@ body {
   }
 
   .navbar__links a::after {
-    content: '';
+    content: "";
     position: absolute;
     bottom: 0;
     left: 0;
@@ -220,5 +254,3 @@ body {
     width: 100%;
   }
 }
-
-
