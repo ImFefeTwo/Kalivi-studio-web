@@ -38,37 +38,23 @@ body.menu-abierto {
 }
 
 .nav {
+  position: fixed;
+  inset: 0;
+  background-color: #9abcc7;
+  z-index: 1000;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
   opacity: 0;
   visibility: hidden;
-  display: flex;
-  flex-direction: column;
-  align-items: end;
-  gap: 1rem;
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  background-color: #9abcc7;
-  padding: 5rem;
-  box-shadow: 0 0 0 100vmax rgba(0, 0, 0, 0.5);
-  transform: translateY(-10px);
-  transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s;
+  transition: opacity 0.3s ease;
 }
 
 .nav-visible {
   opacity: 1;
   visibility: visible;
-  display: flex;
-  flex-direction: column;
-  align-items: end;
-  gap: 3rem;
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  background-color: #9abcc7;
-  padding: 5rem;
-  box-shadow: 0 0 0 100vmax rgba(0, 0, 0, 0.5);
 }
 
 .close-menu,
@@ -77,6 +63,13 @@ body.menu-abierto {
   background-color: transparent;
   cursor: pointer;
   font-size: 5rem;
+}
+
+.close-menu {
+  position: fixed;
+  top: 2.5rem;
+  right: 2.7rem;
+  z-index: 1100;
 }
 
 .nav__list {
